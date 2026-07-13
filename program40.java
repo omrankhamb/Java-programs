@@ -1,46 +1,12 @@
 class Base
 {
-    public Base()
+    public int i;
+    public Base(int x)
     {
-        System.out.println("insidel base constructor");
-    }
-
-
-    public void fun()
-    {
-        System.out.println("insidel Base fun");
+        System.out.println("Inside Base Constructor");
+        this.i = x;
     }
 }
-
-
-class child1 extends Base
-{
-    public child1()
-    {
-        System.out.println("insidel child1 constructor");
-    }
-
-    public void gun()
-    {
-        System.out.println("insidel child1 gun");
-    }
-}
-
-
-
-class child2 extends Base
-{
-    public child2()
-    {
-        System.out.println("insidel child2 constructor");
-    }
-
-    public void sun()
-    {
-        System.out.println("insidel child2 gun");
-    }
-}
-
 
 
 
@@ -48,15 +14,10 @@ class child2 extends Base
 
 class program40
 {
-    public static void main(String Arg[])
+    public static void main(String A[])
     {
-        child1 cobj = new child1();
-        child2 cobj2 = new child2();
+        Base bobj = new Base(10);
+        System.out.println(bobj.i);
 
-        cobj.fun();
-        cobj.gun();
-
-        cobj2.fun();
-        cobj2.sun();
     }
 }
