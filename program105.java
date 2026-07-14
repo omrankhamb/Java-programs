@@ -7,7 +7,7 @@ class NumberX
         int iCnt = 0;
         int iSum = 0;
 
-        for(iCnt = 1 ; iCnt < iNo ; iCnt++)
+        for(iCnt = 1 ; iCnt <=iNo/ 2; iCnt++)
         {
             if(iNo % iCnt == 0)
             {
@@ -20,7 +20,7 @@ class NumberX
     }
 }
 
-class program104
+class program105
 {
     public static void main(String Arg[])
     {
