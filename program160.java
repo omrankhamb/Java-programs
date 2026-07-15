@@ -1,8 +1,7 @@
 import java.util.*;
 
 // Input  : 7 
-// Output : A       2       B       4       C       6       D
-
+// Output : A       b       C       d       E       f       G
 class Pattern 
 {
     public void Display(int iNo) 
@@ -10,24 +9,25 @@ class Pattern
         int iCnt = 0;
         int iCount = 0;
         char ch = 'A';
+        char ch2 = 'a';
 
-        for (iCnt = 1,iCount = 1; iCnt <= iNo; iCnt++) 
+        for (iCnt = 1,iCount = 1; iCnt <= iNo; iCnt++,ch++,ch2++) 
         {
                 if(iCnt % 2 ==  0)
                 {
 
-                    System.out.print(iCnt+"\t");
+                    System.out.print(ch2+"\t");
                 }
                 else
                 {
                     System.out.print(ch+"\t");
-                    ch++;
+                    
                 }
         }
     }
 }
 
-class program159
+class program160
 {
     public static void main(String Arg[]) 
     {
