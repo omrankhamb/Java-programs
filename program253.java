@@ -36,28 +36,22 @@ class  Bit
         return iNo;
     }
 }
-class program252
+class program253
 {
     public static void main(String A[])
     {
         Scanner sobj = new Scanner(System.in);
-        Bit bobj = new Bit();
-
+        
         int iNo = 0;
-        int iPos = 0;
-        int iRet = 0;
+        int iMask = 0xFFFFFFF7;
 
-        System.out.println("Enter A number : ");
+        int iAns = 0;
+
+        System.out.println("Enter a number : ");
         iNo = sobj.nextInt();
 
-        System.out.println("Enter the position : ");
-        iPos = sobj.nextInt();
-
-        iRet = bobj.OffBit(iNo, iPos);
-        System.out.println("Result is : " + iRet);
-
+        iNo = iNo & iMask;
         
-
-        
+        System.out.print("Result is : "+iNo);
     }
 }
