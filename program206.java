@@ -1,6 +1,6 @@
 import java.util.*;
 
-class program201
+class program206
 {
     public static void main(String Arg[])
     {
@@ -8,8 +8,9 @@ class program201
 
         String str = null;
 
+        System.out.println("Enter a String : ");
         str = sobj.nextLine();
 
-        System.out.println(str);
+        System.out.println("entered String is : "+str);
     }
 }

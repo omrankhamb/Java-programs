@@ -10,6 +10,11 @@ class program201
 
         str = sobj.nextLine();
 
+        // error
+        System.out.println(str[0]);
+        System.out.println(str[0]);
+        System.out.println(str[0]);
+
         System.out.println(str);
     }
 }
