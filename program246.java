@@ -1,0 +1,21 @@
+import java.util.*;
+
+class program245
+{
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        int iCnt = 0;
+        int iMask = 0x80000000;
+
+        for(iCnt = 33 ; iCnt >=0  ; iCnt--)
+        {
+            System.out.println(iCnt + "  "+ iMask);
+            iMask = iMask >> 1;
+        }
+           
+
+        
+    }
+}
