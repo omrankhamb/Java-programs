@@ -10,7 +10,7 @@ class node
     }
 }
 
-class Stack
+class Stack<T>
 {
     public node first;
     public  int iCnt;
