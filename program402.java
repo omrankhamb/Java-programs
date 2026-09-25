@@ -1,10 +1,9 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.*;
 import java.net.*;
 import java.util.*;
 import jdk.net.Sockets;
 
-class program376
+class program402
 {
     public static void main(String arg[])
     {
@@ -18,19 +17,20 @@ class program376
 
             DataInputStream dis = new DataInputStream(socket.getInputStream());
             DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
-
-            str = dis.readUTF();
-            System.out.println(str);
-
-            dos.writeUTF("Client message");
-
             
-            str = dis.readUTF();
-            System.out.println(str);
-            str = dis.readUTF();
-            System.out.println(str);
-            str = dis.readUTF();
-            System.out.println(str);
+
+            while (true) { 
+                System.out.println("Enter the commnad");
+                str = sobj.nextLine();
+
+                dos.writeUTF(str);
+                dos.flush();                
+                
+                ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
+                HashMap<Integer,Integer> map = (HashMap<Integer,Integer>) in.readObject();
+                System.out.println(map);
+
+            }
 
         }
         catch(Exception e)
